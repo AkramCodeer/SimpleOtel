@@ -1,0 +1,212 @@
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, yellow, pink, rgb(238, 126, 144)); /* Background color for the entire webpage */
+}
+
+/* CSS for nav */
+.navBar {
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    overflow: hidden;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+#menu {
+    height: 30px;
+    width: 30px;
+    margin-top: 3px;
+}
+
+/* CSS for card container */
+.card {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0;
+    height: 600px;
+}
+
+/* CSS for text and button container */
+.content {
+    flex: 1;
+    align-items: center;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+/* CSS for image container */
+.image {
+    flex: 1;
+    background-image: url('./images/pexels-robin-stickel-70497.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* CSS for text and button */
+.text {
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 20px 50px;
+    background-color: rgb(241, 131, 150);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* CSS for Card-2 */
+.card-2 {
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.column img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.column .image-3 {
+    width: 300px;
+    height: 410px;
+    margin-right: 150px;
+}
+
+.text-card {
+    background-color: rgb(231, 108, 129);
+    height: 200px;
+    width: 500px;
+    margin-top: 150px;
+    margin-right: 150px;
+}
+
+.text-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.text-card-footer img {
+    height: 30px;
+    width: 30px;
+    margin-top: 6px;
+    margin-right: 100px;
+}
+.navBar {
+    background-color: red;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Add position relative for absolute positioning of menuContent */
+    overflow-x: auto;
+}
+
+#menu {
+    cursor: pointer;
+}
+
+#menuContent {
+    display: none;
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    flex-direction: column;
+    animation: slideDown 0.5s ease forwards; /* Add animation */
+}
+
+#menuContent a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #menuContent {
+        background-color: red;
+    }
+}
+
+/* Responsive Layout for card-2 */
+@media (max-width: 768px) {
+    .card,
+    .card-2 {
+        flex-direction: column;
+    }
+    
+    .column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image,
+    .content {
+        padding: 20px; /* Adjust padding */
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text-card {
+        width: auto;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .text-card-footer {
+        margin-right: 0;
+    }
+
+    .column img {
+        margin-left: 0;
+        margin-right: 30%;
+        display: block;
+    }
+
+    .column .image-3 {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
+    }
+}
